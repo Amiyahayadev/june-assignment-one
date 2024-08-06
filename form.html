@@ -52,13 +52,11 @@
 				<div class="group-row">
 					<div>
 						<label for="gender">Gender</label>
-						<select name="gender" id="gender" required>
-							<option value="Select" disabled selected>
-								Select gender
-							</option>
-							<option value="male">Male</option>
-							<option value="female">Female</option>
-						</select>
+                        <input list="gender-list" name="gender" id="gender" aria-required="true" placeholder="Select gender">
+						<datalist id="gender-list">
+							<option value="male" label="male"></option>
+							<option value="female" label="female"></option>
+						</datalist>
 					</div>
 					<br />
 					<div>
@@ -759,23 +757,19 @@
 					<label for="channel"
 						>How did you hear about us?</label
 					>
-					<select name="channel" id="channel" required>
-						<option value="Select" disabled selected>Select</option>
-						<option value="Twitter">Twitter</option>
-						<option value="Facebook">Facebook</option>
-						<option value="linkedIn">linkedIn</option>
-						<option value="Youtube">Youtube</option>
-						<option value="Friend">Friend</option>
-						<option value="Whatsapp">Whatsapp</option>
-						<option value="Instagram">Instagram</option>
-						<option value="Billboard">
-							Bill board
-						</option>
-						<option value="SalesOfficer">
-							Sales officer
-						</option>
-						<option value="Other">Other</option>
-					</select>
+                    <input list="channel-list" name="channel" id="channel" required placeholder="Select channel">
+					<datalist id="channel-list">
+						<option value="Twitter"></option>
+						<option value="Facebook"></option>
+						<option value="linkedIn"></option>
+						<option value="Youtube"></option>
+						<option value="Friend"></option>
+						<option value="Whatsapp"></option>
+						<option value="Instagram"></option>
+						<option value="Billboard"></option>
+						<option value="SalesOfficer"></option>
+						<option value="Other"></option>
+					</datalist>
 				</div>
 
 				<br />
