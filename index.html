@@ -9,7 +9,7 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-            <!-- <script src="https://kit.fontawesome.com/13560a6630.js" crossorigin="anonymous"></script> -->
+        <script src="https://kit.fontawesome.com/13560a6630.js" crossorigin="anonymous"></script>
 		<title>Home - About Amina Yahaya</title>
 		<link rel="stylesheet" type="text/css" href="css/global.css" />
 	</head>
@@ -44,17 +44,17 @@
 					<a
 						href="./form.html"
 						class="no-link-decor d-inline-block"
-						>Form</a
+						>Form <i class="fa-solid fa-arrow-up-right-from-square fa-xs" title="open link" style="color: #4b3503;"></i></a
 					>
 					<a
 						href="./media.html"
 						class="no-link-decor d-inline-block"
-						>Media</a
+						>Media <i class="fa-solid fa-arrow-up-right-from-square fa-xs" title="open link" style="color: #4b3503;"></i></a
 					>
 					<a
 						href="./table.html"
 						class="no-link-decor d-inline-block"
-						>Table</a
+						>Table <i class="fa-solid fa-arrow-up-right-from-square fa-xs" title="open link" style="color: #4b3503;"></i></a
 					>
 				</div>
 			</nav>
@@ -137,6 +137,8 @@
 							page.
 						</summary>
 						<img
+                            width="300"
+                            height="200"
 							src="assets/images/a11y-screenshot-new.png"
 							alt="lighthouse accessibility test result for home page" />
 					</details>
@@ -149,6 +151,8 @@
 							page.
 						</summary>
 						<img
+                            width="300"
+                            height="200"
 							src="assets/images/a11y-screenshot-ii.png"
 							alt="lighthouse accessibility test result for form page" />
 					</details>
@@ -181,11 +185,11 @@
 				</section>
 			</main>
 			<footer class="footer">
-				<button type="button" class="button">
+				<button type="button" class="button show-button">
 					<a
 						href="#top"
 						class="no-link-decor d-inline-block"
-						><img src="assets/images/arrow-up-long.svg" alt="arrow-top">
+						><img src="assets/images/arrow-up-long.svg" alt="scroll to top">
                         </a
 					>
 				</button>
@@ -200,4 +204,15 @@
 			</footer>
 		</div>
 	</body>
+    <script>
+        // show button when the user scrolls down more than 100 pixels
+        window.addEventListener('scroll', function() {
+            const button = document.querySelector('.footer .button');
+            if (window.scrollY > 100) {
+                button.classList.add('show-button');
+            } else {
+                button.classList.remove('show-button');
+            }
+        });
+    </script>
 </html>

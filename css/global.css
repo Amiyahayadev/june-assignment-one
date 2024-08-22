@@ -7,7 +7,6 @@
 	--medium-shade: #eebf3fe2;
 	--light-shade: #ffedae;
 }
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -16,17 +15,15 @@
 html {
   scroll-behavior: smooth;
 }
-
 html,
 body {
 	width: 100%;
 }
-
 img {
+    width: 100%;
 	display: block;
 	max-width: 100%;
 }
-
 /*--- Utility classes --*/
 .no-link-decor {
 	text-decoration: none;
@@ -99,13 +96,15 @@ header > .border {
 .resume a {
 	letter-spacing: 2px;
 }
+.resume a:hover,  .resume a:active{
+    color: var(--medium-shade);
+}
 
 .nav-menu {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
-
 nav.nav-menu > a {
 	color: var(--text-color);
 	font-size: 250%;
@@ -114,8 +113,8 @@ nav.nav-menu > a {
 	align-self: center;
 	text-decoration: none;
 }
-
 .new-tab-links a {
+    width: fit-content;
 	font-size: 1em;
 	padding: 10px 16px;
 	border: 1px solid var(--dark-shade);
@@ -126,11 +125,9 @@ nav.nav-menu > a {
 }
 
 /*---- main SECTIONS ----*/
-
 .sec-padding {
 	padding: 1.5rem 1rem;
 }
-
 h1,
 h2,
 h3 {
@@ -252,15 +249,19 @@ section:nth-of-type(4),
 	border-top: 1px solid var(--medium-shade);
 }
 .footer .button {
+    display: none;
 	all: unset;
 	background-color: var(--text-color);
-	position: fixed;
 	bottom: 1rem;
 	right: 15px;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 	outline: 1px solid var(--body-color);
+}
+.footer .button.show-button {
+    display: block;
+    position: fixed;
 }
 .footer .button > a {
 	display: block;
@@ -278,6 +279,13 @@ section:nth-of-type(4),
 }
 .footer > .copyright {
 	font-size: 0.85rem;
+}
+@media screen and (max-width: 540px){
+    .footer > .social{
+        flex-direction: column;
+        /* align-items: center; */
+        padding-left: 30px;
+    }
 }
 
 /*---------- Desktop layout  --------*/
