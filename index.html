@@ -10,144 +10,157 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Home - About Amina Yahaya</title>
-        <link rel="stylesheet" type="text/css" href="css/global.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
 	</head>
 	<body>
-		<header class="header hide-on-lg-screen">
-			<span class="log">
-				<a href="./index.html" title="Home">AY</a>
-			</span>
-			<span
-				><a href="assets/docs/AYahaya_Resume.pdf" download
-					>Resume</a
-				></span
-			>
-		</header>
-		<nav id="top">
-			<a href="#about-me">About</a>
-			&nbsp;
-			<a href="#skills">Skills</a>
-			&nbsp;
-			<a href="#why-i-joined">Info</a>
-			&nbsp;
-			<a href="#goals">Goals</a>
-			&nbsp;
-			<a href="./form.html">Form</a>
-			&nbsp;
-			<a href="./media.html">Media</a>
-			&nbsp;
-			<a href="./table.html">Table</a>
-		</nav>
-
-		<br />
-		<main>
-			<section id="about-me">
-				<header><h1>About Me</h1></header>
-				<p>Hi There! I'm</p>
-				<p><strong>AMINA YAHAYA</strong></p>
-				<p><em>FrontEnd</em> Engineering Student</p>
-				<small
-					><strong>Altschool ID:</strong>&nbsp;<span
-						>ALT/SOE/024/0298</span
-					></small
+		<div class="wrapper">
+			<header class="hide-on-lg-screen">
+				<span class="logo no-link-decor">
+					<a href="./index.html" class="no-link-decor" title="Home">A.Y</a>
+				</span>
+				<div class="border"></div>
+				<span class="resume"
+					><a href="assets/docs/AYahaya_Resume.pdf" download
+						>Resume</a
+					></span
 				>
-			</section>
-			<hr />
-			<section id="skills">
-				<h2>Skills</h2>
-				<ul>
-					<li>HTML5</li>
-					<li>CSS3</li>
-					<li>WRITING</li>
-					<li>CLI</li>
-					<li>RESPONSIVE DESIGN</li>
-					<li>DIGITAL LITERACY</li>
-				</ul>
-			</section>
-			<hr />
-			<section id="why-i-joined">
-				<h2>Why I Joined AltSchool</h2>
-				<ul>
-					<li>To level up with in-demand skills.</li>
-					<li>To learn fast within an active community.</li>
-					<li>
-						To gain work freedom and financial
-						independence.
-					</li>
-					<li>
-						To gain contentment and fulfillment through
-						my work.
-					</li>
-					<li>
-						To make a meaningful difference in my
-						community and beyond.
-					</li>
-				</ul>
-				<h3>Other relevant information</h3>
-				<p>
-					When I'm not coding or writing, I spend time in
-					nature, read books or watch k-dramas!☺️
-				</p>
-				<p>
-					I'm all about <strong>A11Y</strong> vibes! Access
-					for all, always &hearts;!
-				</p>
-				<p>
-					I Created a beginner-friendly open source
-					project(<a href="#">view repo here</a>) and
-					contributed to an open source(<a href="#"
-						>view repo here</a
-					>).
-				</p>
-				<details>
-					<summary>
-						Check out the accessibility of this page.
-					</summary>
-					<img
-						src="assets/images/a11y-screenshot.png"
-						alt="lighthouse accessibility test result for home page" />
-				</details>
-				<details>
-					<summary>
-						Check out the accessibility of the
-						<a href="./form.html" target="_blank"
-							>form</a
-						>
-						page.
-					</summary>
-					<img
-						src="assets/images/a11y-screenshot-ii.png"
-						alt="lighthouse accessibility test result for form page" />
-				</details>
-			</section>
-			<hr />
-			<section id="goals">
-				<h2>Goals</h2>
-				<ol>
-					<li>To become a world-class EdTech Developer.</li>
-					<li>
-						Get Hands-on experience on building web
-						solutions.
-					</li>
-					<li>
-						Receive adequate mentoring and feedback on
-						my progress.
-					</li>
-					<li>
-						Collaborate with teams and foster genuine
-						friendships.
-					</li>
-					<li>
-						Contribute to the vibrant community in
-						everyway I can.
-					</li>
-				</ol>
-			</section>
-		</main>
-		<footer>
-			<button type="button">
-				<a href="#top">Scroll to Top</a>
-			</button>
-		</footer>
+			</header>
+			<nav id="top" class="nav-menu">
+				<a href="#about-me" class="d-flex align-center">About</a>
+				<a href="#skills" class="d-flex align-center">Skills</a>
+				<a href="#why-i-joined" class="d-flex align-center">Info</a>
+				<a href="#goals" class="d-flex align-center">Goals</a>
+				<div class="new-tab-links d-flex justify-even">
+					<a href="./form.html" class="no-link-decor d-inline-block">Form</a>
+					<a href="./media.html" class="no-link-decor d-inline-block">Media</a>
+					<a href="./table.html" class="no-link-decor d-inline-block">Table</a>
+				</div>
+			</nav>
+			<main class="main">
+				<section id="about-me" class="sec-padding d-flex flex-column">
+					<header><h1>About Me</h1></header>
+                    <div class="header-rule"></div>
+					<p class="greet">Hi There! I'm</p>
+					<p><strong>AMINA YAHAYA</strong></p>
+					<p>FrontEnd Engineering Student</p>
+					<small
+						><strong>Altschool ID:</strong>&nbsp;<span
+							>ALT/SOE/024/0298</span
+						></small
+					>
+				</section>
+				<section id="skills" class="sec-padding">
+					<h2>Skills</h2>
+                    <div class="header-rule"></div>
+					<ul>
+						<li>HTML5</li>
+						<li>CSS3</li>
+                        <li>GIT</li>
+						<li>WRITING</li>
+                        <li>ACCESSIBILITY</li>
+                        <li>COMMAND LINE</li>
+                        <li>DIGITAL LITERACY</li>
+                        <li>JAVASCRIPT BASIC</li>
+						<li>RESPONSIVE DESIGN</li>
+					</ul>
+				</section>
+				<section id="why-i-joined" class="sec-padding">
+					<h2>Why I Joined AltSchool</h2>
+                    <div class="header-rule"></div>
+					<ul>
+						<li>To level up with in-demand skills.</li>
+						<li>
+							To learn fast within an active
+							community.
+						</li>
+						<li>
+							To gain work freedom and financial
+							independence.
+						</li>
+						<li>
+							To gain contentment and fulfillment
+							through my work.
+						</li>
+						<li>
+							To make a meaningful difference in my
+							community and beyond.
+						</li>
+					</ul>
+					<h3>Other relevant information</h3>
+					<p>
+						When I'm not coding or writing, I spend time
+						in nature, read books or watch k-dramas!☺️
+					</p>
+					<p>
+						I'm all about <strong>A11Y</strong> vibes!
+						Access for all, always &hearts;!
+					</p>
+					<p>
+						I Created a beginner-friendly open source
+						project (<a href="#github-repo">view repo here</a>) and
+						contributed to an open source (<a href="#github-repo"
+							>view repo here</a
+						>).
+					</p>
+					<details>
+						<summary>
+							Check out the accessibility of this
+							page.
+						</summary>
+						<img
+							src="assets/images/a11y-screenshot-new.png"
+							alt="lighthouse accessibility test result for home page" />
+					</details>
+					<details>
+						<summary>
+							Check out the accessibility of
+							<a href="./form.html" target="_blank"
+								>form</a
+							>
+							page.
+						</summary>
+						<img
+							src="assets/images/a11y-screenshot-ii.png"
+							alt="lighthouse accessibility test result for form page" />
+					</details>
+				</section>
+				<section id="goals" class="sec-padding">
+					<h2>Goals</h2>
+                    <div class="header-rule txt-center"></div>
+					<ol>
+						<li>
+							To become a world-class EdTech
+							Developer.
+						</li>
+						<li>
+							Get Hands-on experience on building
+							web solutions.
+						</li>
+						<li>
+							Receive adequate mentoring and
+							feedback on my progress.
+						</li>
+						<li>
+							Collaborate with teams and foster
+							genuine friendships.
+						</li>
+						<li>
+							Contribute to the vibrant community in
+							everyway I can.
+						</li>
+					</ol>
+				</section>
+			</main>
+			<footer class="footer">
+				<button type="button" class="button">
+					<a href="#top" class="no-link-decor d-inline-block">Top</a>
+				</button>
+                <p class="social d-flex justify-even">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Medium</a>
+                    <a href="#">Github</a>
+                </p>
+			</footer>
+		</div>
 	</body>
 </html>
