@@ -232,6 +232,9 @@ summary {
 summary a[href="./form.html"] {
 	padding: 0.5rem;
 }
+details > img {
+    height: auto;
+}
 
 /*-- GOALS section --*/ /*--- FOOTER ---*/
 
