@@ -23,6 +23,7 @@ img {
     width: 100%;
 	display: block;
 	max-width: 100%;
+    height: auto;
 }
 /*--- Utility classes --*/
 .no-link-decor {
@@ -74,7 +75,7 @@ header.hide-on-lg-screen {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	border-bottom: 1px solid var(--light-shade);
+	border-bottom: 1px solid var(--light-shade)
 }
 header a {
 	display: inline-block;
@@ -90,7 +91,7 @@ header a {
 	text-decoration: underline;
 }
 header > .border {
-	border-left: 1px solid var(--light-shade);
+	border-inline-start: 1px solid var(--light-shade);
 	height: 100%;
 }
 .resume a {
@@ -139,7 +140,7 @@ p {
 }
 .header-rule {
 	margin-inline: auto;
-	border-bottom: 1.5px solid var(--medium-shade);
+	border-block-end: 1.5px solid var(--medium-shade);
 	width: 50px;
 }
 .header-rule {
@@ -158,7 +159,6 @@ header > h1 {
 	font-size: 2rem;
 }
 section:first-child > p {
-	border: 1px solid var(--medium-shade);
 	background-color: var(--medium-shade);
 	color: var(--text-color-2);
 	font-size: 1.15rem;
@@ -174,9 +174,6 @@ section:first-child > small {
 	border: 2px dashed var(--medium-shade);
 	padding: 10px;
 }
-section:first-child p::first-letter {
-	font-size: 130%; /* QUESTION! why doesn't this reflect */
-}
 
 /*-- SKILLS section --*/
 .main h2 {
@@ -189,7 +186,6 @@ section:nth-of-type(2) > ul {
 	gap: 1.5rem;
 	& li {
 		display: inline-block;
-		border: 0.5px solid var(--light-shade);
 		background-color: var(--light-shade);
 		padding: 0.8rem;
 		border-radius: 5px;
@@ -208,7 +204,7 @@ section:nth-of-type(4) > ol {
 	}
 }
 section:nth-of-type(3) > p {
-	border: 1px solid var(--text-color);
+	border: 1px solid;
 	margin-bottom: 1em;
 	padding: 12px;
 	text-align: justify;
@@ -220,9 +216,11 @@ section:nth-of-type(3) > p {
 details summary::marker {
 	content: "\002B""";
 }
-
 details[open] summary::marker {
 	content: "\2212""";
+}
+details {
+    margin-block-end: 5px;
 }
 summary {
 	font-size: 0.8rem;
@@ -231,9 +229,6 @@ summary {
 }
 summary a[href="./form.html"] {
 	padding: 0.5rem;
-}
-details > img {
-    height: auto;
 }
 
 /*-- GOALS section --*/ /*--- FOOTER ---*/
@@ -249,7 +244,7 @@ section:nth-of-type(4),
 }
 .footer {
 	width: 100%;
-	border-top: 1px solid var(--medium-shade);
+	border-block-start: 1px solid var(--medium-shade);
 }
 .footer .button {
     display: none;
