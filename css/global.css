@@ -13,17 +13,17 @@
 	padding: 0;
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 html,
 body {
 	width: 100%;
 }
 img {
-    width: 100%;
+	width: 100%;
 	display: block;
 	max-width: 100%;
-    height: auto;
+	height: auto;
 }
 /*--- Utility classes --*/
 .no-link-decor {
@@ -71,11 +71,11 @@ body {
 a[href] {
 	color: var(--text-color-2);
 }
-header.hide-on-lg-screen {
+header.hide-on-lg-screen, nav.menu {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	border-bottom: 1px solid var(--light-shade)
+	border-bottom: 1px solid var(--light-shade);
 }
 header a {
 	display: inline-block;
@@ -97,8 +97,9 @@ header > .border {
 .resume a {
 	letter-spacing: 2px;
 }
-.resume a:hover,  .resume a:active{
-    color: var(--medium-shade);
+.resume a:hover,
+.resume a:active {
+	color: var(--medium-shade);
 }
 
 .nav-menu {
@@ -115,14 +116,22 @@ nav.nav-menu > a {
 	text-decoration: none;
 }
 .new-tab-links a {
-    width: fit-content;
+	width: fit-content;
 	font-size: 1em;
 	padding: 10px 16px;
 	border: 1px solid var(--dark-shade);
 	box-shadow: rgba(67, 65, 60, 0.09) 0px 2px 1px,
 		rgba(67, 65, 60, 0.09) 0px 4px 2px,
-		rgba(67, 65, 60, 0.09) 0px 8px 4px, rgba(67, 65, 60, 0.09) 0px 16px 8px,
+		rgba(67, 65, 60, 0.09) 0px 8px 4px,
+		rgba(67, 65, 60, 0.09) 0px 16px 8px,
 		rgba(67, 65, 60, 0.09) 0px 32px 16px;
+}
+/* media and table page */
+nav.menu a[href]{
+    padding: 10px;
+}
+header.header-two {
+    margin-block-end: 2em;
 }
 
 /*---- main SECTIONS ----*/
@@ -133,7 +142,7 @@ h1,
 h2,
 h3 {
 	text-align: center;
-	font-weight: 200;
+	font-weight: 300;
 }
 p {
 	word-wrap: break-word;
@@ -152,27 +161,32 @@ p {
 	}
 }
 .main section:first-child {
-	height: 98vh;
-	justify-content: space-evenly;
+	margin-block-start: 1.5rem;
 }
 header > h1 {
 	font-size: 2rem;
 }
-section:first-child > p {
+section:first-child > .cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+	margin-block-end: 1.5em;
+}
+.cards > p {
+	min-height: 150px;
 	background-color: var(--medium-shade);
 	color: var(--text-color-2);
 	font-size: 1.15rem;
-	height: 24.5%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	box-shadow: rgba(67, 65, 60, 0.3) 0px 1px 2px 0px,
 		rgba(67, 65, 60, 0.15) 0px 2px 6px 2px;
+}
+.cards p:last-child {
+	padding: 0 20px;
 }
 section:first-child > small {
 	border: 2px dashed var(--medium-shade);
 	padding: 10px;
+	display: block;
 }
 
 /*-- SKILLS section --*/
@@ -220,7 +234,7 @@ details[open] summary::marker {
 	content: "\2212""";
 }
 details {
-    margin-block-end: 5px;
+	margin-block-end: 5px;
 }
 summary {
 	font-size: 0.8rem;
@@ -247,7 +261,7 @@ section:nth-of-type(4),
 	border-block-start: 1px solid var(--medium-shade);
 }
 .footer .button {
-    display: none;
+	display: none;
 	all: unset;
 	background-color: var(--text-color);
 	bottom: 1rem;
@@ -258,8 +272,8 @@ section:nth-of-type(4),
 	outline: 1px solid var(--body-color);
 }
 .footer .button.show-button {
-    display: block;
-    position: fixed;
+	display: block;
+	position: fixed;
 }
 .footer .button > a {
 	display: block;
@@ -268,8 +282,8 @@ section:nth-of-type(4),
 	padding: 1rem;
 }
 .footer .button img {
-    display: inline-flex;
-    justify-content: center;
+	display: inline-flex;
+	justify-content: center;
 }
 .footer > .social,
 .footer > .copyright {
@@ -278,15 +292,26 @@ section:nth-of-type(4),
 .footer > .copyright {
 	font-size: 0.85rem;
 }
-@media screen and (max-width: 540px){
-    .footer > .social{
-        flex-direction: column;
-        /* align-items: center; */
-        padding-left: 30px;
-    }
+
+@media screen and (max-width: 540px) {
+	.footer > .social {
+		flex-direction: column;
+		/* align-items: center; */
+		padding-left: 30px;
+	}
 }
 
 /*---------- Desktop layout  --------*/
 @media all and (min-width: 950px) {
-	/* change layout */
+	main.main {
+		width: 80%;
+		max-width: 1200px;
+		margin-inline: auto;
+		& section {
+			max-width: unset;
+		}
+	}
+	section:first-child > .cards {
+		grid-template-rows: 300px;
+	}
 }

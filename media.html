@@ -8,63 +8,84 @@
     <link rel="stylesheet" type="text/css" href="css/media.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header-two">
+        <nav class="menu">
             <a href="./index.html">Home</a>
-            &nbsp;
             <a href="./table.html">Table</a>
-            &nbsp;
             <a href="./media.html">Media</a>
-            &nbsp;
             <a href="./form.html">Form</a>
-            &nbsp;
         </nav>
+    </header>
     <main>
         <h1>Html Media about Myself</h1>
-        <br>
-        <br>
-        <br>
-        <h2>Video Element</h2>
-        <video controls muted autoplay loop preload="auto" width="100%">
-            <source src="assets/videos/responsive-table.mp4" type="video/mp4">
-            <source src="assets/videos/responsive-table.webm" type="video/webm">
-            Your browser does not support the video element.
-        </video>
-        <div><small><em>Responsive Table layout design</em></small></div>
-        <br>
-        <h2>Audio Element</h2>
-        <audio controls muted>
-            <source src="assets/audio/Aboutme.mp3" type="audio/mpeg">
-            <source src="assets/audio/Aboutme.wav" type="audio/wav">
-            <source src="assets/audio/Aboutme.ogg" type="audio/ogg">
-            Your browser does not support the audio element.
-            <track kind="captions" src="captions.vtt" srclang="en" label="English">
-        </audio>
-        <br>
-        <h2>Picture Element</h2>
-        <picture>
-            <source media="(min-width: 1020px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/myPortrait-1020_hgwxgx.jpg" type="image/jpg">
-            <source media="(min-width: 800px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/myPortrait-800jpg_isoxfh.jpg" type="image/jpg">
-            <source media="(min-width: 500px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-500_hz3axc.webp" type="image/webp">
-            <source media="(min-width: 320px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-480_vcl5q4.jpg" type="image/webp">
-            <img src="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-300_wzudvv.webp" alt="Author's image" crossorigin="anonymous" width="300" height="500">
-        </picture>
-        <div><small>Author sitting infront of a computer</small></div>
-        <br>
-        <h2>Img Element</h2>
-        <img src="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/responsive-table-small_qamdjd.png"
-            alt="Author's project" loading="lazy" crossorigin="anonymous" width="300" height="500"
-            sizes="(min-width: 320px) 90vw, (min-width: 768px) 60vw"
-            srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/responsive-table-small_qamdjd.png 640w,
-                    https://res.cloudinary.com/durufresj/image/upload/v1722975328/altschool/responsive-table-large_okv1dx.png 1024w">
-        <div>
-            <small>
-                <a href="https://responsive-table-challenge.web.app/" target="_blank">Live Site</a>
-                - My responsive table template design</small>
-        </div>
-        <br>
-        <br>
-        <br>
+        <div class="header-rule"></div>
+        <p class="intro-text">
+            <em>I'm a Frontend Engineering student, currently focusing on HTML, CSS, and JavaScript.</em>
+            I've always been passionate about designing and creating visually appealing interfaces.
+            I have a strong foundation in HTML and CSS, but I recently picked up JavaScript to enhance
+            my skills and make my projects more interactive.
+            I enjoy working on various projects, from small websites to large-scale applications.
+            I'm always looking for opportunities to learn new skills and improve my existing ones.
+        </p>
+        <!-- media-element 1 -->
+        <article class="media-element">
+            <h2>Video Element</h2>
+            <div class="header-rule"></div>
+            <div class="responsive-video">
+                <video controls muted autoplay loop preload="auto" width="500">
+                <source src="assets/videos/responsive-table.mp4" type="video/mp4">
+                <source src="assets/videos/responsive-table.webm" type="video/webm">
+                Your browser does not support the video element.
+                </video>
+            </div>
+            <div class="vid-caption"><small><em>Responsive Table layout design</em></small></div>
+        </article>
+         <!-- media-element 2 -->
+        <article class="media-element">
+            <h2>Audio Element</h2>
+            <div class="header-rule"></div>
+            <div class="audio-container">
+                <audio controls muted>
+                    <source src="assets/audio/Aboutme.mp3" type="audio/mpeg">
+                    <source src="assets/audio/Aboutme.wav" type="audio/wav">
+                    <source src="assets/audio/Aboutme.ogg" type="audio/ogg">
+                    Your browser does not support the audio element.
+                    <track kind="captions" src="captions.vtt" srclang="en" label="English">
+                </audio>
+            </div>
+        </article>
+ <!-- media-element 3 -->
+        <article class="media-element media-element-card">
+            <h2>Picture Element</h2>
+            <div class="header-rule"></div>
+            <div class="media-wrap">
+                <picture>
+                    <source media="(min-width: 1020px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/myPortrait-1020_hgwxgx.jpg" type="image/jpg">
+                    <source media="(min-width: 800px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/myPortrait-800jpg_isoxfh.jpg" type="image/jpg">
+                    <source media="(min-width: 500px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-500_hz3axc.webp" type="image/webp">
+                    <source media="(min-width: 320px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-480_vcl5q4.jpg" type="image/webp">
+                    <img src="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-300_wzudvv.webp" alt="Author's image" crossorigin="anonymous" width="300" height="500">
+                </picture>
+                <div class="caption"><small>Amina Yahaya<br>Developer,&nbsp;Writer</small></div>
+            </div>
+        </article>
+         <!-- media-element 4 -->
+        <article class="media-element media-element-card">
+            <h2>Img Element</h2>
+            <div class="header-rule"></div>
+            <div class="media-wrap">
+                <img src="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/responsive-table-small_qamdjd.png"
+                    alt="Author's project" loading="lazy" crossorigin="anonymous" width="300" height="500"
+                    sizes="(min-width: 320px) 90vw, (min-width: 768px) 60vw"
+                    srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/responsive-table-small_qamdjd.png 640w,
+                            https://res.cloudinary.com/durufresj/image/upload/v1722975328/altschool/responsive-table-large_okv1dx.png 1024w">
+                <div class="caption">
+                    <small>
+                        <a href="https://responsive-table-challenge.web.app/" target="_blank">Live Site</a>
+                        - My responsive table template design clone from Colorlib</small>
+                </div>
+            </div>
+        </article>
     </main>
 </body>
 </html>
