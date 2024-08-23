@@ -7,6 +7,8 @@ This graded project is a demonstration of basic front-end skills learned during 
 
 ## Screenshots
 
-| Mobile | Desktop |
-|---|---|
-| ![](assets/images/mobile-design.png) | ![](assets/images/desktop-design.png) |
+### Mobile Layout and Desktop Layout
+
+- ![](assets/images/mobile-design.png)
+
+- ![](assets/images/desktop-design.png)
