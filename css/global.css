@@ -285,10 +285,10 @@ section:nth-of-type(4),
 	display: none;
 	all: unset;
 	background-color: var(--text-color);
-	bottom: 1rem;
+	bottom: 0.5rem;
 	right: 15px;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 	outline: 1px solid var(--body-color);
 }
@@ -310,15 +310,11 @@ section:nth-of-type(4),
 .footer > .copyright {
 	padding: 0.7rem;
 }
+.footer > p.social {
+    padding-block-end: 1.5rem
+}
 .footer > .copyright {
 	font-size: 0.85rem;
-}
-
-@media screen and (max-width: 540px) {
-	.footer > .social {
-		flex-direction: column;
-		padding-left: 30px;
-	}
 }
 
 /*---------- Desktop layout  --------*/
