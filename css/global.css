@@ -53,6 +53,9 @@ img {
 .gap-1 {
 	gap: 1rem;
 }
+.padding-x {
+    padding-inline: 1rem;
+}
 
 /*---------- Mobile layout  --------*/
 .wrapper {
@@ -133,8 +136,16 @@ nav.nav-menu > a {
 nav.menu a[href] {
 	padding: 10px;
 }
+
 header.header-two {
 	margin-block-end: 2em;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-color: #fdfaecc2;
+    backdrop-filter: blur(5px);
+
 }
 
 /*---- main SECTIONS ----*/
