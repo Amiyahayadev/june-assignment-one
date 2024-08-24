@@ -3,10 +3,12 @@
 	--text-color: #342b09;
 	--text-color-2: #4b3503;
 	--opaque-color: #40350b8e;
-	--body-color: #f9f7ee;
+	--body-color: #fdfaec;
 	--dark-shade: #6f4e05;
 	--medium-shade: #eebf3fe2;
 	--light-shade: #ffedae;
+    --blur-color: #fdfaec9f;
+    --blur-radius: blur(3px);
 }
 *,
 *::before,
@@ -27,6 +29,10 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+.resume a,.new-tab-links a {
+    display: inline-block;
+    max-width: fit-content;
 }
 /*--- Utility classes --*/
 .no-link-decor {
@@ -125,7 +131,6 @@ nav.nav-menu > a {
 	text-decoration: none;
 }
 .new-tab-links a {
-	width: fit-content;
 	font-size: 1em;
 	padding: 10px 16px;
 	border: 1px solid var(--dark-shade);
@@ -145,9 +150,9 @@ header.header-two {
 	position: sticky;
 	top: 0px;
 	left: 0px;
-	z-index: 3;
-	background-color: #fdfaecc2;
-	backdrop-filter: blur(5px);
+	z-index: 5;
+	background-color: var(--blur-color);
+	backdrop-filter: var(--blur-radius);
 }
 
 /*---- main SECTIONS ----*/
@@ -318,6 +323,9 @@ section:nth-of-type(4),
 
 /*---------- Desktop layout  --------*/
 @media all and (min-width: 950px) {
+    .resume a, .new-tab-links a {
+    max-width: 80px;
+}
 	main.main {
 		grid-area: main;
 		& section {
