@@ -25,7 +25,7 @@
 	width: 100%;
 }
 .media-element {
-	border-block: 1px solid;
+	border-block: 1px solid var(--opaque-color);
 	margin-block-end: 2em;
 }
 .media-element-card {
