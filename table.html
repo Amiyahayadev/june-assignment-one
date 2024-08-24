@@ -3,69 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/13560a6630.js" crossorigin="anonymous"></script>
     <title>Html Table</title>
     <link rel="stylesheet" type="text/css" href="css/global.css">
     <link rel="stylesheet" type="text/css" href="css/table.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header-two">
+        <nav class="menu">
             <a href="./index.html">Home</a>
-            &nbsp;
             <a href="./table.html">Table</a>
-            &nbsp;
             <a href="./media.html">Media</a>
-            &nbsp;
             <a href="./form.html">Form</a>
-            &nbsp;
         </nav>
     </header>
     <main>
-        <div>
-            <h1>Html Table about Altschool</h1>
-            <br>
-            <br>
-            <br>
-            <table>
-                <caption><strong>AltSchool Programs</strong></caption>
-                <thead>
-                    <tr>
-                        <th>Schools</th>
-                        <th colspan="4" scope="col">Courses</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">School of data</th>
-                        <td>Data analysis</td>
-                        <td>Data science</td>
-                        <td colspan="2">Data engineering</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">School of product</th>
-                        <td>Product design</td>
-                        <td>Product marketing</td>
-                        <td colspan="2">Product management</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">School of business</th>
-                        <td>Digital marketing</td>
-                        <td colspan="3">Sales</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">School of Creative Economy</th>
-                        <td>Content creation</td>
-                        <td colspan="3">Music business and Afro beats</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">School of engineering</th>
-                        <td>Frontend engineering</td>
-                        <td>Backend engineering</td>
-                        <td>Cloud engineering</td>
-                        <td>Cybersecurity</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="container">
+            <h1 class="main-heading padding-x">Html Table about Altschool</h1>
+            <div class="responsive-table">
+                <small class="scroll-hint">Swipe <i class="fa-solid fa-angles-right fa-2xs" style="color: #342b09;" title="Swipe left"></i></small>
+                <table>
+                    <caption><strong>AltSchool Programs</strong></caption>
+                    <thead>
+                        <tr>
+                            <th class="column-header">Schools</th>
+                            <th class="column-header" colspan="4" scope="col">Courses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">School of data</th>
+                            <td>Data analysis</td>
+                            <td>Data science</td>
+                            <td colspan="2">Data engineering</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">School of product</th>
+                            <td>Product design</td>
+                            <td>Product marketing</td>
+                            <td colspan="2">Product management</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">School of business</th>
+                            <td>Digital marketing</td>
+                            <td colspan="3">Sales</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">School of Creative Economy</th>
+                            <td>Content creation</td>
+                            <td colspan="3">Music business and Afro beats</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">School of engineering</th>
+                            <td>Frontend engineering</td>
+                            <td>Backend engineering</td>
+                            <td>Cloud engineering</td>
+                            <td>Cybersecurity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
 </body>
