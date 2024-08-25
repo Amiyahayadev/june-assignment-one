@@ -79,6 +79,9 @@ body {
 a[href] {
 	color: var(--text-color-2);
 }
+a:hover:not(.nav-menu a, .footer a[href]) {
+    color: var(--medium-shade);
+}
 header.hide-on-lg-screen,
 nav.menu {
 	display: flex;
@@ -124,6 +127,9 @@ nav.nav-menu > a {
 	flex: 1;
 	align-self: center;
 	text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 .new-tab-links a {
 	font-size: 1em;
