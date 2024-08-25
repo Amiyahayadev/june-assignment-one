@@ -1,91 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html Media Elements</title>
-    <link rel="stylesheet" type="text/css" href="css/global.css">
-    <link rel="stylesheet" type="text/css" href="css/media.css">
-</head>
-<body>
-    <header class="header-two">
-        <nav class="menu">
-            <a href="./index.html">Home</a>
-            <a href="./table.html">Table</a>
-            <a href="./media.html">Media</a>
-            <a href="./form.html">Form</a>
-        </nav>
-    </header>
-    <main>
-        <h1 class="padding-x">Html Media about Myself</h1>
-        <div class="header-rule"></div>
-        <p class="intro-text">
-            <em>I'm a Frontend Engineering student, currently focusing on HTML, CSS, and JavaScript.</em>
-            I've always been passionate about designing and creating visually appealing interfaces.
-            I have a strong foundation in HTML and CSS, but I recently picked up JavaScript to enhance
-            my skills and make my projects more interactive.
-            I enjoy working on various projects, from small websites to large-scale applications.
-            I'm always looking for opportunities to learn new skills and improve my existing ones.
-        </p>
-        <!-- media-element 1 -->
-        <article class="media-element">
-            <h2>Video Element</h2>
-            <div class="header-rule"></div>
-            <div class="responsive-video">
-                <video controls muted autoplay loop preload="auto" width="500">
-                <source src="assets/videos/responsive-table.mp4" type="video/mp4">
-                <source src="assets/videos/responsive-table.webm" type="video/webm">
-                Your browser does not support the video element.
-                </video>
-            </div>
-            <div class="vid-caption"><small><em>Responsive Table layout design</em></small></div>
-        </article>
-         <!-- media-element 2 -->
-        <article class="media-element">
-            <h2>Audio Element</h2>
-            <div class="header-rule"></div>
-            <div class="audio-container">
-                <audio controls muted>
-                    <source src="assets/audio/Aboutme.mp3" type="audio/mpeg">
-                    <source src="assets/audio/Aboutme.wav" type="audio/wav">
-                    <source src="assets/audio/Aboutme.ogg" type="audio/ogg">
-                    Your browser does not support the audio element.
-                    <track kind="captions" src="captions.vtt" srclang="en" label="English">
-                </audio>
-            </div>
-        </article>
- <!-- media-element 3 -->
-        <article class="media-element media-element-card">
-            <h2>Picture Element</h2>
-            <div class="header-rule"></div>
-            <div class="media-wrap">
-                <picture>
-                    <source media="(min-width: 1020px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/myPortrait-1020_hgwxgx.jpg" type="image/jpg">
-                    <source media="(min-width: 800px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/myPortrait-800jpg_isoxfh.jpg" type="image/jpg">
-                    <source media="(min-width: 500px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-500_hz3axc.webp" type="image/webp">
-                    <source media="(min-width: 320px)" srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-480_vcl5q4.jpg" type="image/webp">
-                    <img src="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-300_wzudvv.webp" alt="Author's image" crossorigin="anonymous" width="300" height="500">
-                </picture>
-                <div class="caption"><small>Amina Yahaya<br>Developer,&nbsp;Writer</small></div>
-            </div>
-        </article>
-         <!-- media-element 4 -->
-        <article class="media-element media-element-card">
-            <h2>Img Element</h2>
-            <div class="header-rule"></div>
-            <div class="media-wrap">
-                <img src="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/responsive-table-small_qamdjd.png"
-                    alt="Author's project" loading="lazy" crossorigin="anonymous" width="300" height="500"
-                    sizes="(min-width: 320px) 90vw, (min-width: 768px) 60vw"
-                    srcset="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/responsive-table-small_qamdjd.png 640w,
-                            https://res.cloudinary.com/durufresj/image/upload/v1722975328/altschool/responsive-table-large_okv1dx.png 1024w">
-                <div class="caption">
-                    <small>
-                        <a href="https://responsive-table-challenge.web.app/" target="_blank">Live Site</a>
-                        - My responsive table template design clone from Colorlib</small>
-                </div>
-            </div>
-        </article>
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Html Media Elements</title>
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/media.css" />
+	</head>
+
+	<body>
+		<header class="header-two">
+			<nav class="menu">
+				<a href="./index.html">Home</a>
+				<a href="./table.html">Table</a>
+				<a href="./media.html">Media</a>
+				<a href="./form.html">Form</a>
+			</nav>
+		</header>
+		<main>
+			<h1 class="padding-x">Html Media about Myself</h1>
+			<div class="header-rule"></div>
+			<p class="intro-text">
+				<em
+					>I'm a Frontend Engineering student, currently
+					focusing on HTML, CSS, and JavaScript.</em
+				>
+				I've always been passionate about designing and creating
+				visually appealing interfaces. I have a strong
+				foundation in HTML and CSS, but I recently picked up
+				JavaScript to enhance my skills and make my projects
+				more interactive. I enjoy working on various projects,
+				from small websites to large-scale applications. I'm
+				always looking for opportunities to learn new skills and
+				improve my existing ones.
+			</p>
+			<!-- media-element 1 -->
+			<article class="media-element">
+				<h2>Video Element</h2>
+				<div class="header-rule"></div>
+				<div class="responsive-video">
+					<video
+						controls
+						muted
+						autoplay
+						loop
+						preload="auto"
+						width="500">
+						<source
+							src="assets/videos/responsive-table.mp4"
+							type="video/mp4" />
+						<source
+							src="assets/videos/responsive-table.webm"
+							type="video/webm" />
+						Your browser does not support the video
+						element.
+					</video>
+				</div>
+				<div class="vid-caption">
+					<small
+						><em
+							>Responsive Table layout design</em
+						></small
+					>
+				</div>
+			</article>
+			<!-- media-element 2 -->
+			<article class="media-element">
+				<h2>Audio Element</h2>
+				<div class="header-rule"></div>
+				<div class="audio-container">
+					<audio controls muted>
+						<source
+							src="assets/audio/Aboutme.mp3"
+							type="audio/mpeg" />
+						<source
+							src="assets/audio/Aboutme.wav"
+							type="audio/wav" />
+						<source
+							src="assets/audio/Aboutme.ogg"
+							type="audio/ogg" />
+						Your browser does not support the audio
+						element.
+						<track
+							kind="captions"
+							src="captions.vtt"
+							srclang="en"
+							label="English" />
+					</audio>
+				</div>
+			</article>
+			<!-- media-element 3 -->
+			<article class="media-element media-element-card">
+				<h2>Picture Element</h2>
+				<div class="header-rule"></div>
+				<div class="media-wrap">
+					<picture>
+						<source
+							media="(min-width: 1020px)"
+							srcset="
+								https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/myPortrait-1020_hgwxgx.jpg
+							"
+							type="image/jpg" />
+						<source
+							media="(min-width: 800px)"
+							srcset="
+								https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/myPortrait-800jpg_isoxfh.jpg
+							"
+							type="image/jpg" />
+						<source
+							media="(min-width: 500px)"
+							srcset="
+								https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-500_hz3axc.webp
+							"
+							type="image/webp" />
+						<source
+							media="(min-width: 320px)"
+							srcset="
+								https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-480_vcl5q4.jpg
+							"
+							type="image/webp" />
+						<img
+							src="https://res.cloudinary.com/durufresj/image/upload/v1722975326/altschool/myPortrait-300_wzudvv.webp"
+							alt="Author's image"
+							crossorigin="anonymous"
+							width="300"
+							height="500" />
+					</picture>
+					<div class="caption">
+						<small
+							>Amina Yahaya<br />Developer,&nbsp;Writer</small
+						>
+					</div>
+				</div>
+			</article>
+			<!-- media-element 4 -->
+			<article class="media-element media-element-card">
+				<h2>Img Element</h2>
+				<div class="header-rule"></div>
+				<div class="media-wrap">
+					<img
+						src="https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/responsive-table-small_qamdjd.png"
+						alt="Author's project"
+						loading="lazy"
+						crossorigin="anonymous"
+						width="300"
+						height="500"
+						sizes="(min-width: 320px) 90vw, (min-width: 768px) 60vw"
+						srcset="
+							https://res.cloudinary.com/durufresj/image/upload/v1722975327/altschool/responsive-table-small_qamdjd.png  640w,
+							https://res.cloudinary.com/durufresj/image/upload/v1722975328/altschool/responsive-table-large_okv1dx.png 1024w
+						" />
+					<div class="caption">
+						<small>
+							<a
+								href="https://responsive-table-challenge.web.app/"
+								target="_blank"
+								>Live Site</a
+							>&nbsp;|&nbsp;<a
+								href="https://github.com/Amiyahayadev/awesome-table-challenge/tree/main"
+								target="_blank"
+								>Source code</a
+							>
+							- Responsive table template clone from
+							<a href="https://colorlib.com/"
+								>Colorlib</a
+							></small
+						>
+					</div>
+				</div>
+				<br />
+				<div class="media-wrap">
+					<img
+						src="https://res.cloudinary.com/durufresj/image/upload/t_brown-background/v1724624411/altschool/my-responsive-designs-640_ebr88m.jpg"
+						alt="Author's project"
+						loading="lazy"
+						crossorigin="anonymous"
+						width="300"
+						height="500"
+						sizes="(min-width: 320px) 90vw, (min-width: 768px) 60vw"
+						srcset="
+							https://res.cloudinary.com/durufresj/image/upload/t_brown-background/v1724624411/altschool/my-responsive-designs-640_ebr88m.jpg   640w,
+							https://res.cloudinary.com/durufresj/image/upload/t_brown-background/v1724624411/altschool/my-responsive-designs-1024_ahkezn.jpg 1024w
+						" />
+					<div class="caption">
+						<small>
+							<a
+								href="https://mini-portfolio-website.web.app/"
+								target="_blank"
+								>Live Site</a
+							>&nbsp;|&nbsp;<a
+								href="https://github.com/Amiyahayadev/friendly-lamp-portfolio"
+								target="_blank"
+								>Source code</a
+							>
+							- Portfolio page clone</small
+						><br />
+						<small
+							><a
+								href="https://accessible-contact-form.web.app/"
+								target="_blank"
+								>Live Site</a
+							>&nbsp;|&nbsp;<a
+								href="https://github.com/Amiyahayadev/accessible-contact-form"
+								target="_blank"
+								>Source code</a
+							>
+							- Contact form clone</small
+						><br />
+						<small
+							><a
+								href="https://event-page-fun.web.app/"
+								target="_blank"
+								>Live Site</a
+							>&nbsp;|&nbsp;<a
+								href="https://github.com/Amiyahayadev/event-ideal-sniffle"
+								target="_blank"
+								>Source code</a
+							>
+							- Event page template</small
+						>
+					</div>
+				</div>
+			</article>
+		</main>
+	</body>
 </html>
