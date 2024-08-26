@@ -8,7 +8,14 @@
 	--medium-shade: #eebf3fe2;
 	--light-shade: #ffedae;
 	--blur-color: #fdfaec9f;
+	--blur-color2: rgba(255, 255, 255, 0.205);
+	--blur-color3: rgb(52 43 9 / 64%);
 	--blur-radius: blur(3px);
+	--blur-radius2: blur(10px);
+	--shadow-one: rgba(67, 65, 60, 0.3) 0px 1px 2px 0px,
+		rgba(67, 65, 60, 0.15) 0px 2px 6px 2px;
+	--shadow-two: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 *,
 *::before,
@@ -34,6 +41,9 @@ img {
 /*--- Utility classes --*/
 .no-link-decor {
 	text-decoration: none;
+}
+.d-block {
+	display: block;
 }
 .d-inline-block {
 	display: inline-block;
@@ -62,6 +72,12 @@ img {
 .padding-x {
 	padding-inline: 1rem;
 }
+.font-light {
+	font-weight: 300;
+}
+.b-radius {
+    border-radius: 5px;
+}
 
 /*---------- Mobile layout  --------*/
 .wrapper {
@@ -87,20 +103,44 @@ a:hover:not(.nav-menu a, .footer a[href], .logo a[href]) {
 header.hide-on-lg-screen,
 nav.menu {
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
-	border-bottom: 1px solid var(--light-shade);
 }
-header a {
+header.hide-on-lg-screen {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding-inline: 1rem;
+    justify-content: space-between;
+}
+nav.menu {
+    	border-bottom: 1px solid var(--light-shade);
+        justify-content: space-around;
+}
+header a, .logo > span {
 	display: inline-block;
-	padding: 14px;
+}
+.logo, .resume {
+    display: inline-flex;
+    min-width: 90px;
+    background-color: var(--blur-color);
+    backdrop-filter: var(--blur-radius);
+    -webkit-backdrop-filter: var(--blur-radius);
+}
+.logo > span {
+    margin-right: 4px;
+    background-color: var(--text-color);
+}
+.logo > span > img {
+    height: 40px;
+    width: 40px;
 }
 .logo a.shadows-into-light-regular,
 .logo a.shadows-into-light-regular:link {
 	font-family: "Shadows Into Light", Calibri;
 	font-weight: 400;
 	color: var(--text-color);
-	font-size: 26px;
+	font-size: 28px;
 }
 .logo a.shadows-into-light-regular:hover,
 .logo a.shadows-into-light-regular:active {
@@ -112,6 +152,7 @@ header > .border {
 }
 .resume a {
 	letter-spacing: 2px;
+    padding: 10px;
 }
 .resume a:hover,
 .resume a:active {
@@ -135,7 +176,7 @@ nav.nav-menu > a {
 	text-align: center;
 }
 nav.nav-menu > a:first-of-type {
-    margin-block-start: 1em;
+	margin-block-start: 1em;
 }
 .new-tab-links a {
 	font-size: 1em;
@@ -160,6 +201,7 @@ header.header-two {
 	z-index: 5;
 	background-color: var(--blur-color);
 	backdrop-filter: var(--blur-radius);
+	-webkit-backdrop-filter: var(--blur-radius);
 }
 
 /*---- main SECTIONS ----*/
@@ -180,7 +222,7 @@ p {
 	border-block-end: 1.5px solid var(--medium-shade);
 	width: 50px;
 }
-.header-rule {
+.header-rule, section:nth-of-type(3) > ul {
 	margin-bottom: 1.4em;
 }
 .main section:first-child {
@@ -200,16 +242,15 @@ section:first-child > .cards {
 	background-color: var(--medium-shade);
 	color: var(--text-color-2);
 	font-size: 1.15rem;
-	box-shadow: rgba(67, 65, 60, 0.3) 0px 1px 2px 0px,
-		rgba(67, 65, 60, 0.15) 0px 2px 6px 2px;
+	box-shadow: var(--shadow-one);
+	text-align: center;
 }
-.cards p:last-child {
+.cards p:first-child ~ p {
 	padding: 0 20px;
 }
 section:first-child > small {
 	border: 2px dashed var(--medium-shade);
 	padding: 10px;
-	display: block;
 }
 
 /*-- SKILLS section --*/
@@ -235,11 +276,17 @@ section:nth-of-type(3) {
 }
 section:nth-of-type(3) > ul,
 section:nth-of-type(4) > ol {
-	padding-inline-start: 30px;
+	padding: 30px;
+	border: none;
+	backdrop-filter: var(--blur-radius2);
+	-webkit-backdrop-filter: var(--blur-radius2);
+	background-color: var(--blur-color2);
+	box-shadow: var(--shadow-two);
 	& li {
 		margin-bottom: 10px;
 	}
 }
+
 section:nth-of-type(3) > p {
 	border: 1px solid;
 	margin-bottom: 1em;
@@ -285,12 +332,14 @@ section:nth-of-type(4),
 .footer .button {
 	display: none;
 	all: unset;
-	background-color: var(--text-color);
 	bottom: 0.5rem;
 	right: 15px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
+	backdrop-filter: var(--blur-radius);
+	background-color: var(--blur-color3);
+	-webkit-backdrop-filter: var(--blur-radius);
 	outline: 1px solid var(--body-color);
 }
 .footer .button.show-button {
@@ -298,9 +347,9 @@ section:nth-of-type(4),
 	position: fixed;
 }
 .footer .button > a {
-	display: block;
 	text-align: center;
 	padding: 1.1rem;
+	border-radius: 50%;
 }
 .footer .button img {
 	display: inline-flex;
@@ -323,6 +372,7 @@ section:nth-of-type(4),
 	.resume a,
 	.new-tab-links a {
 		max-width: 80px;
+        padding: unset;
 	}
 	main.main {
 		grid-area: main;
@@ -387,6 +437,6 @@ section:nth-of-type(4),
 		padding: 8px 10px;
 	}
 	.cards > p {
-		font-size: 120%;
+		font-size: 130%;
 	}
 }
