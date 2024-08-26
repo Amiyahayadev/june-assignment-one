@@ -5,17 +5,25 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700;800&display=swap"
+			rel="stylesheet" />
 		<title>Application Form</title>
 	</head>
 	<body>
 		<header>
-            <nav>
-                <div><a href="./index.html">Home</a></div>
-                <div>
-                    <strong>Already an AltSchooler?</strong
-                    ><a href="">&nbsp;<strong>Sign In!</strong></a>
-                </div>
-            </nav>
+			<nav>
+				<div><a href="./index.html">Home</a></div>
+				<div>
+					<strong>Already an AltSchooler?</strong
+					><a href="">&nbsp;<strong>Sign In!</strong></a>
+				</div>
+			</nav>
 		</header>
 		<main>
 			<form action="form.html" method="post">
@@ -32,8 +40,8 @@
 						<input
 							name="first-name"
 							id="first-name"
-                            autocomplete="given-name"
-                            required
+							autocomplete="given-name"
+							required
 							placeholder="Enter first name" />
 					</div>
 					<br />
@@ -42,8 +50,8 @@
 						<input
 							name="last-name"
 							id="last-name"
-                            autocomplete="family-name"
-                            required
+							autocomplete="family-name"
+							required
 							placeholder="Enter last name" />
 					</div>
 				</div>
@@ -52,10 +60,19 @@
 				<div class="group-row">
 					<div>
 						<label for="gender">Gender</label>
-                        <input list="gender-list" name="gender" id="gender" aria-required="true" placeholder="Select gender">
+						<input
+							list="gender-list"
+							name="gender"
+							id="gender"
+							aria-required="true"
+							placeholder="Select gender" />
 						<datalist id="gender-list">
-							<option value="male" label="male"></option>
-							<option value="female" label="female"></option>
+							<option
+								value="male"
+								label="male"></option>
+							<option
+								value="female"
+								label="female"></option>
 						</datalist>
 					</div>
 					<br />
@@ -78,8 +95,8 @@
 							type="email"
 							name="email"
 							id="email"
-                            required
-                            autocomplete="email"
+							required
+							autocomplete="email"
 							placeholder="Enter email address" />
 					</div>
 					<br />
@@ -89,8 +106,8 @@
 							type="text"
 							name="phone"
 							id="phone"
-                            required
-                            autocomplete="tel"
+							required
+							autocomplete="tel"
 							placeholder="08154387000" />
 					</div>
 				</div>
@@ -99,8 +116,15 @@
 				<div class="group-row">
 					<div>
 						<label for="country">Country</label>
-						<select name="country" id="country" required autocomplete="country-name">
-							<option value="Select" disabled selected>
+						<select
+							name="country"
+							id="country"
+							required
+							autocomplete="country-name">
+							<option
+								value="Select"
+								disabled
+								selected>
 								select your country
 							</option>
 							<option value="Afghanistan">
@@ -738,7 +762,7 @@
 							</option>
 						</select>
 					</div>
-                    <br />
+					<br />
 					<div>
 						<label for="city-of-residence"
 							>State/City of Residence</label
@@ -747,7 +771,7 @@
 							type="text"
 							name="city-of-residence"
 							id="city-of-residence"
-                            required
+							required
 							placeholder="Enter your state of residence" />
 					</div>
 				</div>
@@ -757,7 +781,12 @@
 					<label for="channel"
 						>How did you hear about us?</label
 					>
-                    <input list="channel-list" name="channel" id="channel" required placeholder="Select channel">
+					<input
+						list="channel-list"
+						name="channel"
+						id="channel"
+						required
+						placeholder="Select channel" />
 					<datalist id="channel-list">
 						<option value="Twitter"></option>
 						<option value="Facebook"></option>
@@ -780,7 +809,7 @@
 							type="password"
 							name="password"
 							id="password"
-                            autocomplete="new-password"
+							autocomplete="new-password"
 							placeholder="Enter password" />
 					</div>
 					<br />
@@ -792,7 +821,7 @@
 							type="password"
 							name="confirm-password"
 							id="confirm-password"
-                            autocomplete="new-password"
+							autocomplete="new-password"
 							placeholder="Enter password again" />
 					</div>
 				</div>
@@ -801,7 +830,7 @@
 					<a href="#">Terms of Use</a> and acknowledge that
 					I have read the <a href="#">Privacy Policy.</a>
 				</p>
-                <button>Submit</button>
+				<button>Submit</button>
 			</form>
 		</main>
 	</body>
