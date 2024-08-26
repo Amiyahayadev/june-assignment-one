@@ -6,31 +6,121 @@
 - heading font-familu: AlmarenaBold, sans-serif;
 -  labels font-family:  AlmarenaDisplayBold, sans-serif;
  */
- body {
-    font-style: normal;
- }
- .mukta-light {
-  font-family: "Mukta", sans-serif;
-  font-weight: 300;
+:root {
+	--light: #fafafa;
+	--text-color1: #0566f1;
+	--text-color2: #0c1e4b;
+	--text-color3: #1f1f1f;
+	--text-color4: #85888c;
+	--bg-one: #fff;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-style: normal;
+	font-family: "Mukta", sans-serif;
+	font-size: 1rem;
+	color: var(--text-color3);
+	background-color: var(--bg-one);
+}
+.mukta-light {
+	font-weight: 300;
 }
 
 .mukta-regular {
-  font-family: "Mukta", sans-serif;
-  font-weight: 400;
+	font-weight: 400;
 }
 
 .mukta-medium {
-  font-family: "Mukta", sans-serif;
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .mukta-bold {
-  font-family: "Mukta", sans-serif;
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .mukta-extrabold {
-  font-family: "Mukta", sans-serif;
-  font-weight: 800;
-  font-style: normal;
+	font-weight: 800;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/*-------- header ---------*/
+header * {
+	text-align: center;
+}
+header .home {
+	background-color: var(--light);
+	padding: 0.5rem;
+}
+a[href],
+a[href]:link {
+	color: var(--text-color1);
+}
+nav img {
+	width: 80px;
+	margin-inline: auto;
+}
+.logo-n-signUp {
+	font-size: 1.15rem;
+}
+
+/*-------- main ---------*/
+.container {
+	display: grid;
+	grid-template-rows: auto 1fr;
+}
+main.wrapper {
+	width: 92%;
+	margin-inline: auto;
+	border: 1px solid;
+}
+
+/*------ form  -------*/
+form h1 {
+	font-size: 1.3rem;
+	color: var(--text-color2);
+}
+h1 + p {
+	color: var(--text-color4);
+}
+.hero,
+footer {
+	border: 1px solid;
+	display: none;
+}
+@media screen and (min-width: 768px) {
+	main.wrapper {
+		width: unset;
+		margin-inline: unset;
+	}
+    .hero,
+	footer {
+		display: block;
+	}
+	.container {
+		grid-template-columns: minmax(auto, 1fr) 1.5fr;
+		grid-template-areas: "hero header" "hero wrapper" "hero footer";
+        gap: 1rem;
+        height: 100vh;
+	}
+	main.wrapper {
+		grid-area: wrapper; /* Assign grid area to main */
+	}
+	.hero {
+		grid-area: hero; /* Assign grid area to hero */
+	}
+	footer.footer {
+		grid-area: footer; /* Assign grid area to footer */
+	}
+	header.header {
+		grid-area: header; /* Assign grid area to header */
+	}
 }
