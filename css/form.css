@@ -8,11 +8,11 @@
  */
 :root {
 	--light: #fafafa;
-	--text-color1: #0566f1;
+	--text-color1: #044fbb;
 	--text-color2: #0c1e4b;
 	--text-color3: #1f1f1f;
-	--text-color4: #85888c;
-	--placeholder: #9b9b9c;
+	--text-color4: #56585b;
+	--placeholder: #5e5f5f;
 	--bg-one: #fff;
     --focus-ring: #c7def670;
 }
@@ -152,9 +152,10 @@ input:focus, select:focus {
 button {
 	border: none;
 	margin-block-end: 4rem;
-	background-color: #6a6ff5;
+	background-color: #5156ec;
 	color: var(--light);
 	cursor: pointer;
+    font-size: 1rem;
 }
 .terms {
 	color: var(--text-color4);
