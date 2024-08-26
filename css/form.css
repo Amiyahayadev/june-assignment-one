@@ -12,11 +12,9 @@
 	--text-color2: #0c1e4b;
 	--text-color3: #1f1f1f;
 	--text-color4: #85888c;
-	--placeholder: #a1a2a4;
+	--placeholder: #9b9b9c;
 	--bg-one: #fff;
     --focus-ring: #c7def670;
-	--error-state: #f23535;
-	--valid-state: #35f296;
 }
 *,
 *::before,
@@ -55,6 +53,9 @@ body {
 .margin-bn {
 	margin-bottom: 1.5rem;
 }
+.txt-center {
+    text-align: center;
+}
 img {
 	display: block;
 	max-width: 100%;
@@ -88,7 +89,6 @@ nav img {
 main.wrapper {
 	width: 92%;
 	margin-inline: auto;
-	/* border: 1px solid; TO:REMOVE*/
 }
 
 /*------ form  -------*/
@@ -101,7 +101,6 @@ h1 + p {
 }
 .hero,
 footer {
-	border: 1px solid;
 	display: none;
 }
 form:invalid {
@@ -128,7 +127,6 @@ select {
 	font-size: 1rem;
 	color: var(--text-color2);
 	background-color: var(--light);
-	font-weight: 200;
 }
 form label {
 	font-size: 1.15rem;
@@ -142,7 +140,7 @@ select,
 input[type="date"] {
 	color: var(--placeholder);
 	font-size: 0.85rem;
-	font-weight: inherit;
+	font-weight: 300;
 	letter-spacing: 1.5px;
 }
 input:focus, select:focus {
@@ -161,13 +159,12 @@ button {
 .terms {
 	color: var(--text-color4);
 }
-
+.footer-text-all {
+    line-height: 1.2;
+    max-width: 400px;
+}
 /**------ Large screen layout  *------*/
 @media screen and (min-width: 768px) {
-	main.wrapper {
-		width: unset;
-		margin-inline: unset;
-	}
 	.hero,
 	footer {
 		display: block;
@@ -175,19 +172,51 @@ button {
 	.container {
 		grid-template-columns: minmax(auto, 1fr) 1.5fr;
 		grid-template-areas: "hero header" "hero wrapper" "hero footer";
-		gap: 1rem;
-		height: 100vh;
+		max-height: 100vh;
 	}
 	main.wrapper {
-		grid-area: wrapper; /* Assign grid area to main */
+        grid-area: wrapper; /* Assign grid area to main */
+        width: 90%;
+        max-width: 900px;
+        margin-inline: auto;
+        overflow: auto;
 	}
 	.hero {
 		grid-area: hero; /* Assign grid area to hero */
+        background-color: var(--light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
 	}
 	footer.footer {
 		grid-area: footer; /* Assign grid area to footer */
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--bg-one);
 	}
 	header.header {
 		grid-area: header; /* Assign grid area to header */
 	}
+    .hero-text {
+        font-size: 3rem;
+        line-height: 1;
+        padding-inline: 1rem;
+    }
+    .footer > div {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer-text-on-tablet {
+        display: none;
+    }
+    .footer > div {
+        display: revert;
+    }
+    footer.footer p {
+        padding-inline-start: 2.5rem;
+    }
 }
