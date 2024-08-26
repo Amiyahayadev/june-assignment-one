@@ -76,7 +76,7 @@ img {
 	font-weight: 300;
 }
 .b-radius {
-    border-radius: 5px;
+	border-radius: 5px;
 }
 
 /*---------- Mobile layout  --------*/
@@ -106,34 +106,36 @@ nav.menu {
 	align-items: center;
 }
 header.hide-on-lg-screen {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    padding-inline: 1rem;
-    justify-content: space-between;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	padding-inline: 1rem;
+	justify-content: space-between;
 }
 nav.menu {
-    	border-bottom: 1px solid var(--light-shade);
-        justify-content: space-around;
+	border-bottom: 1px solid var(--light-shade);
+	justify-content: space-around;
 }
-header a, .logo > span {
+header a,
+.logo > span {
 	display: inline-block;
 }
-.logo, .resume {
-    display: inline-flex;
-    min-width: 90px;
-    background-color: var(--blur-color);
-    backdrop-filter: var(--blur-radius);
-    -webkit-backdrop-filter: var(--blur-radius);
+.logo,
+.resume {
+	display: inline-flex;
+	min-width: 90px;
+	background-color: var(--blur-color);
+	backdrop-filter: var(--blur-radius);
+	-webkit-backdrop-filter: var(--blur-radius);
 }
 .logo > span {
-    margin-right: 4px;
-    background-color: var(--text-color);
+	margin-right: 4px;
+	background-color: var(--text-color);
 }
 .logo > span > img {
-    height: 40px;
-    width: 40px;
+	height: 40px;
+	width: 40px;
 }
 .logo a.shadows-into-light-regular,
 .logo a.shadows-into-light-regular:link {
@@ -152,7 +154,7 @@ header > .border {
 }
 .resume a {
 	letter-spacing: 2px;
-    padding: 10px;
+	padding: 10px;
 }
 .resume a:hover,
 .resume a:active {
@@ -208,6 +210,7 @@ header.header-two {
 .sec-padding {
 	padding: 1.5rem 1rem;
 }
+
 h1,
 h2,
 h3 {
@@ -222,7 +225,8 @@ p {
 	border-block-end: 1.5px solid var(--medium-shade);
 	width: 50px;
 }
-.header-rule, section:nth-of-type(3) > ul {
+.header-rule,
+section:nth-of-type(3) > ul {
 	margin-bottom: 1.4em;
 }
 .main section:first-child {
@@ -369,10 +373,14 @@ section:nth-of-type(4),
 
 /*---------- Desktop layout  --------*/
 @media all and (min-width: 950px) {
+	.reduce-width {
+		max-width: 700px;
+		margin-inline: auto;
+	}
 	.resume a,
 	.new-tab-links a {
 		max-width: 80px;
-        padding: unset;
+		padding: unset;
 	}
 	main.main {
 		grid-area: main;
