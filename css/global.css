@@ -7,8 +7,8 @@
 	--dark-shade: #6f4e05;
 	--medium-shade: #eebf3fe2;
 	--light-shade: #ffedae;
-    --blur-color: #fdfaec9f;
-    --blur-radius: blur(3px);
+	--blur-color: #fdfaec9f;
+	--blur-radius: blur(3px);
 }
 *,
 *::before,
@@ -22,13 +22,14 @@ html {
 }
 img {
 	width: 100%;
-    height: auto;
+	height: auto;
 	display: block;
 	max-width: 100%;
 }
-.resume a, .new-tab-links a {
-    display: inline-block;
-    max-width: fit-content;
+.resume a,
+.new-tab-links a {
+	display: inline-block;
+	max-width: fit-content;
 }
 /*--- Utility classes --*/
 .no-link-decor {
@@ -73,14 +74,15 @@ body {
 	font-size: 1rem;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 		sans-serif;
+	font-style: normal;
 	color: var(--text-color);
 	line-height: 1.5;
 }
 a[href] {
 	color: var(--text-color-2);
 }
-a:hover:not(.nav-menu a, .footer a[href]) {
-    color: var(--medium-shade);
+a:hover:not(.nav-menu a, .footer a[href], .logo a[href]) {
+	color: var(--medium-shade);
 }
 header.hide-on-lg-screen,
 nav.menu {
@@ -93,13 +95,15 @@ header a {
 	display: inline-block;
 	padding: 14px;
 }
-.logo a,
-.logo a:link {
+.logo a.shadows-into-light-regular,
+.logo a.shadows-into-light-regular:link {
+	font-family: "Shadows Into Light", Calibri;
+	font-weight: 400;
 	color: var(--text-color);
-	font-size: 24px;
+	font-size: 26px;
 }
-.logo a:hover,
-.logo a:active {
+.logo a.shadows-into-light-regular:hover,
+.logo a.shadows-into-light-regular:active {
 	text-decoration: underline;
 }
 header > .border {
@@ -127,9 +131,9 @@ nav.nav-menu > a {
 	flex: 1;
 	align-self: center;
 	text-decoration: none;
-    display: block;
-    width: 100%;
-    text-align: center;
+	display: block;
+	width: 100%;
+	text-align: center;
 }
 .new-tab-links a {
 	font-size: 1em;
@@ -303,10 +307,10 @@ section:nth-of-type(4),
 .footer > .social,
 .footer > .copyright {
 	padding: 0.7rem;
-    font-weight: 300;
+	font-weight: 300;
 }
 .footer > p.social {
-    padding-block-end: 1.5rem
+	padding-block-end: 1.5rem;
 }
 .footer > .copyright {
 	font-size: 0.85rem;
@@ -314,9 +318,10 @@ section:nth-of-type(4),
 
 /*---------- Desktop layout  --------*/
 @media all and (min-width: 950px) {
-    .resume a, .new-tab-links a {
-    max-width: 80px;
-}
+	.resume a,
+	.new-tab-links a {
+		max-width: 80px;
+	}
 	main.main {
 		grid-area: main;
 		& section {
@@ -379,7 +384,7 @@ section:nth-of-type(4),
 	.new-tab-links a {
 		padding: 8px 10px;
 	}
-    .cards > p {
-        font-size: 120%;
-    }
+	.cards > p {
+		font-size: 120%;
+	}
 }
