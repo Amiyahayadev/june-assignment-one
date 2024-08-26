@@ -12,7 +12,11 @@
 	--text-color2: #0c1e4b;
 	--text-color3: #1f1f1f;
 	--text-color4: #85888c;
+	--placeholder: #a1a2a4;
 	--bg-one: #fff;
+    --focus-ring: #c7def670;
+	--error-state: #f23535;
+	--valid-state: #35f296;
 }
 *,
 *::before,
@@ -27,6 +31,7 @@ body {
 	font-size: 1rem;
 	color: var(--text-color3);
 	background-color: var(--bg-one);
+	line-height: normal;
 }
 .mukta-light {
 	font-weight: 300;
@@ -46,6 +51,9 @@ body {
 
 .mukta-extrabold {
 	font-weight: 800;
+}
+.margin-bn {
+	margin-bottom: 1.5rem;
 }
 img {
 	display: block;
@@ -80,7 +88,7 @@ nav img {
 main.wrapper {
 	width: 92%;
 	margin-inline: auto;
-	border: 1px solid;
+	/* border: 1px solid; TO:REMOVE*/
 }
 
 /*------ form  -------*/
@@ -96,20 +104,79 @@ footer {
 	border: 1px solid;
 	display: none;
 }
+form:invalid {
+	border: unset;
+}
+form label,
+input,
+select,
+button {
+	display: block;
+	width: 100%;
+}
+input,
+select,
+button {
+	border-radius: 5px;
+	padding: 1rem;
+	line-height: 1.5;
+}
+input,
+select {
+	border: none;
+	margin-block-end: 1rem;
+	font-size: 1rem;
+	color: var(--text-color2);
+	background-color: var(--light);
+	font-weight: 200;
+}
+form label {
+	font-size: 1.15rem;
+	font-weight: 300;
+}
+ /* ensure cross-browser consistency */
+::-webkit-input-placeholder,
+::placeholder,
+input::placeholder,
+select,
+input[type="date"] {
+	color: var(--placeholder);
+	font-size: 0.85rem;
+	font-weight: inherit;
+	letter-spacing: 1.5px;
+}
+input:focus, select:focus {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 1px;
+    border: 1px solid var(--text-color1);
+    border-radius: 5px;
+}
+button {
+	border: none;
+	margin-block-end: 4rem;
+	background-color: #6a6ff5;
+	color: var(--light);
+	cursor: pointer;
+}
+.terms {
+	color: var(--text-color4);
+}
+
+/**------ Large screen layout  *------*/
 @media screen and (min-width: 768px) {
 	main.wrapper {
 		width: unset;
 		margin-inline: unset;
 	}
-    .hero,
+	.hero,
 	footer {
 		display: block;
 	}
 	.container {
 		grid-template-columns: minmax(auto, 1fr) 1.5fr;
 		grid-template-areas: "hero header" "hero wrapper" "hero footer";
-        gap: 1rem;
-        height: 100vh;
+		gap: 1rem;
+		height: 100vh;
 	}
 	main.wrapper {
 		grid-area: wrapper; /* Assign grid area to main */

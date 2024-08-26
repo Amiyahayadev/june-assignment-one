@@ -19,7 +19,7 @@
 	<body>
         <div class="container">
             <div class="hero">img goes here</div>
-            <header class="header">
+            <header class="header margin-bn">
                 <nav>
                     <div class="home mukta-medium"><a href="./index.html">Home</a></div>
                     <div class="logo-n-signUp">
@@ -30,7 +30,7 @@
             </header>
             <main class="wrapper">
                 <form action="form.html" method="post">
-                    <div>
+                    <div class="margin-bn">
                         <h1>Signup</h1>
                         <p class="mukta-light">
                             Take the next steps to apply at AltSchool
@@ -64,7 +64,7 @@
                                 list="gender-list"
                                 name="gender"
                                 id="gender"
-                                aria-required="true"
+                                required
                                 placeholder="Select gender" />
                             <datalist id="gender-list">
                                 <option
@@ -83,10 +83,9 @@
                             <input
                                 type="date"
                                 name="date-of-birth"
-                                id="date-of-birth" />
+                                id="date-of-birth" required/>
                         </div>
                     </div>
-
                     <div class="group-row">
                         <div>
                             <label for="email">Email</label>
@@ -110,7 +109,6 @@
                                 placeholder="08154387000" />
                         </div>
                     </div>
-
                     <div class="group-row">
                         <div>
                             <label for="country">Country</label>
@@ -120,7 +118,6 @@
                                 required
                                 autocomplete="country-name">
                                 <option
-                                    value="Select"
                                     disabled
                                     selected>
                                     select your country
@@ -773,7 +770,6 @@
                                 placeholder="Enter your state of residence" />
                         </div>
                     </div>
-
                     <div class="group-row">
                         <label for="channel"
                             >How did you hear about us?</label
@@ -797,7 +793,6 @@
                             <option value="Other"></option>
                         </datalist>
                     </div>
-
                     <div class="group-row">
                         <div>
                             <label for="password">Password</label>
@@ -805,10 +800,10 @@
                                 type="password"
                                 name="password"
                                 id="password"
+                                required
                                 autocomplete="new-password"
                                 placeholder="Enter password" />
                         </div>
-
                         <div>
                             <label for="confirm-password"
                                 >Confirm Password</label
@@ -817,11 +812,12 @@
                                 type="password"
                                 name="confirm-password"
                                 id="confirm-password"
+                                required
                                 autocomplete="new-password"
                                 placeholder="Enter password again" />
                         </div>
                     </div>
-                    <p>
+                    <p class="terms mukta-light margin-bn">
                         By clicking continue, I agree to
                         <a href="#">Terms of Use</a> and acknowledge that
                         I have read the <a href="#">Privacy Policy.</a>
