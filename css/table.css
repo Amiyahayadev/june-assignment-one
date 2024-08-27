@@ -5,6 +5,9 @@
 	width: 100%;
 	overflow-x: auto;
 }
+.grid-width {
+    grid-template-columns: 100%;
+}
 .container {
     padding: 0 0.5rem;
 }

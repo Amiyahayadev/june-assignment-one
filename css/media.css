@@ -1,3 +1,4 @@
+
 .intro-text {
 	padding: 1rem;
 	font-weight: 300;
@@ -16,6 +17,7 @@
 }
 .vid-caption {
 	text-align: center;
+    margin-block-end: 2em;
 }
 .audio-container {
 	padding: 1rem;
@@ -25,12 +27,13 @@
 	width: 100%;
 }
 .media-element {
-	border-block: 1px solid var(--opaque-color);
+	border-block-end: 1px solid var(--opaque-color);
+    border-bottom-left-radius: 50px;
 	margin-block-end: 2em;
 }
 .media-element-card {
-	background-color: var(--dark-shade);
-	padding: 20px 10px;
+	background-color: var(--medium-shade);
+	padding: 20px 10px 70px;
 }
 .media-element-card h2 {
 	color: var(--body-color);
@@ -38,8 +41,14 @@
 .media-wrap {
 	background-color: var(--body-color);
 	width: 100%;
-	color: var(--dark-shade);
+	color: var(--medium-shade);
 	padding: 15px 15px 0px;
+}
+.header-rule2 {
+    border-block-end: 1px solid var(--light-shade);
+    margin-inline: auto;
+    margin-block-end: 2em;
+    width: 50px;
 }
 .media-wrap .caption {
 	padding: 15px 0;

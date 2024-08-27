@@ -3,11 +3,10 @@
 	--text-color: #342b09;
 	--text-color-2: #4b3503;
 	--opaque-color: #40350b8e;
-	--body-color: #fdfaec;
-	--dark-shade: #6f4e05;
-	--medium-shade: #eebf3fe2;
-	--light-shade: #ffedae;
-	--blur-color: #fdfaec9f;
+	--body-color: rgba(240, 239, 239, 0.97);
+	--medium-shade: #6f4e05;
+	--light-shade: #fffffe;
+	--blur-color: #f0efee70;
 	--blur-color2: rgba(255, 255, 255, 0.205);
 	--blur-color3: rgb(52 43 9 / 64%);
 	--blur-radius: blur(3px);
@@ -84,9 +83,17 @@ img {
 	display: grid;
 	grid-template-rows: 8vh 90vh 1fr auto;
 }
-
-body {
+.bg-container {
+	display: grid;
+	grid-template-rows: auto minmax(100vh, 1fr);
+}
+.bg-container,
+.wrapper {
 	background-color: var(--body-color);
+}
+body {
+	background: url(https://res.cloudinary.com/durufresj/image/upload/v1724777697/altschool/blurr-background_ew9mi8.png);
+	background-position: center center;
 	font-size: 1rem;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 		sans-serif;
@@ -169,21 +176,41 @@ header > .border {
 }
 nav.nav-menu > a {
 	color: var(--text-color);
-	font-size: 250%;
+	font-size: 200%;
 	font-weight: 900;
 	flex: 1;
 	text-decoration: none;
-	display: block;
-	width: 100%;
 	text-align: center;
+    cursor: pointer;
 }
+.nav-links-mobile {
+	border: 4px solid #7b7a764b;
+	background-color: var(--blur-color2);
+	width: 90%;
+	margin-inline: auto;
+	margin-block-end: 1rem;
+	background-size: 0% 100%;
+	transition: background-color 0.5s;
+}
+.nav-links-mobile:hover {
+	background-color: transparent;
+	background-image: linear-gradient(
+		to right,
+		rgba(111, 77, 5, 0.404) 0%,
+		rgba(255, 255, 255, 0.18) 100%
+	);
+	background-repeat: no-repeat;
+	background-size: 200% 100%;
+	transition: background-size 1s, background-color 1s;
+}
+
 nav.nav-menu > a:first-of-type {
 	margin-block-start: 1em;
 }
 .new-tab-links a {
 	font-size: 1em;
 	padding: 10px 16px;
-	border: 1px solid var(--dark-shade);
+	border: 1px solid var(--medium-shade);
 	box-shadow: rgba(67, 65, 60, 0.09) 0px 2px 1px,
 		rgba(67, 65, 60, 0.09) 0px 4px 2px,
 		rgba(67, 65, 60, 0.09) 0px 8px 4px,
@@ -243,7 +270,9 @@ section:first-child > .cards {
 }
 .cards > p {
 	min-height: 150px;
-	background-color: var(--medium-shade);
+	background-color: var(--blur-color2);
+	backdrop-filter: var(--blur-radius2);
+	-webkit-backdrop-filter: var(--blur-radius2);
 	color: var(--text-color-2);
 	font-size: 1.15rem;
 	box-shadow: var(--shadow-one);
@@ -268,16 +297,15 @@ section:nth-of-type(2) > ul {
 	gap: 1.5rem;
 	& li {
 		display: inline-block;
-		background-color: var(--light-shade);
-		padding: 0.8rem;
+		background-color: transparent;
+		padding: 0.6rem;
+		border: 2px solid var(--opaque-color);
 		border-radius: 5px;
 	}
 }
 
 /*-- INFO section --*/
-section:nth-of-type(3) {
-	background-color: var(--light-shade);
-}
+
 section:nth-of-type(3) > ul,
 section:nth-of-type(4) > ol {
 	padding: 30px;
@@ -381,6 +409,17 @@ section:nth-of-type(4),
 	.new-tab-links a {
 		max-width: 80px;
 		padding: unset;
+	}
+	.nav-links-mobile {
+		all: unset;
+	}
+    .nav-links-mobile:hover {
+        background-color: none;
+        background-image: none;
+        transition: none;
+    }
+	nav.nav-menu > a {
+		width: 100%;
 	}
 	main.main {
 		grid-area: main;
