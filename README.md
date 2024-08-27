@@ -5,10 +5,4 @@ This graded project is a demonstration of basic front-end skills learned during 
 ## Live link
 [Visit live site](https://amiyahayadev.github.io/june-assignment-one/)
 
-## Screenshots
 
-### Mobile Layout and Desktop Layout
-
-- ![](assets/images/mobile-design.png)
-
-- ![](assets/images/desktop-design.png)
