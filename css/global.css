@@ -348,12 +348,14 @@ details[open] summary::marker {
 	content: "\2212""";
 }
 details {
-	margin-block-end: 5px;
+	margin-block-end: 16px;
 }
 summary {
-	font-size: 0.8rem;
-	padding: 5px 12px;
+	font-size: 0.92rem;
+	padding: 10px 12px;
 	border: 1px solid var(--medium-shade);
+    outline: 2px solid #eec83f56;
+    outline-offset: 1.5px;
 }
 summary a[href="./form.html"] {
 	padding: 0.5rem;
