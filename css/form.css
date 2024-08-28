@@ -208,6 +208,13 @@ button {
     .footer > div {
         display: none;
     }
+    .group-row {
+        display: flex;
+        gap: 0.9rem;
+    }
+    .group-row > div {
+        flex: 1;
+    }
 }
 
 @media screen and (min-width: 1024px) {
