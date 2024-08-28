@@ -357,6 +357,9 @@ summary {
     outline: 2px solid #eec83f56;
     outline-offset: 1.5px;
 }
+summary:hover {
+    border: 1px solid var(--accent-color)
+}
 summary a[href="./form.html"] {
 	padding: 0.5rem;
 }
