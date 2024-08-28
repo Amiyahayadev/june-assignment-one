@@ -6,6 +6,7 @@
 	--body-color: rgba(240, 239, 239, 0.97);
 	--medium-shade: #6f4e05;
 	--light-shade: #fffffe;
+	--accent-color: #eec83f;
 	--blur-color: #f0efee70;
 	--blur-color2: rgba(255, 255, 255, 0.205);
 	--blur-color3: rgb(52 43 9 / 64%);
@@ -104,8 +105,9 @@ body {
 a[href] {
 	color: var(--text-color-2);
 }
-a:hover:not(.nav-menu a, .footer a[href], .logo a[href]) {
-	color: var(--medium-shade);
+a:hover:not(.nav-menu a, .footer a[href], .logo a[href]),
+.new-tab-links a:hover {
+	color: var(--accent-color);
 }
 header.hide-on-lg-screen,
 nav.menu {
@@ -199,14 +201,19 @@ nav.nav-menu > a {
 }
 .gradient-text {
 	background-color: var(--text-color);
-	background-image: linear-gradient(90deg, rgba(52,43,9,1) 25%, rgba(252,176,69,0.86) 70%, rgba(255,255,254,1) 100%);
+	background-image: linear-gradient(
+		90deg,
+		rgba(52, 43, 9, 1) 25%,
+		rgba(252, 176, 69, 0.86) 70%,
+		rgba(255, 255, 254, 1) 100%
+	);
 	background-size: 100%;
 	background-repeat: repeat;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
 }
 
 nav.nav-menu > a:first-of-type {
@@ -254,7 +261,7 @@ p {
 }
 .header-rule {
 	margin-inline: auto;
-	border-block-end: 1.5px solid var(--medium-shade);
+	border-block-end: 1.5px solid var(--accent-color);
 	width: 50px;
 }
 .header-rule,
@@ -369,6 +376,10 @@ section:nth-of-type(4),
 .footer .button {
 	display: none;
 	all: unset;
+}
+.footer .button.show-button {
+	display: block;
+	position: fixed;
 	bottom: 0.5rem;
 	right: 15px;
 	width: 50px;
@@ -378,10 +389,6 @@ section:nth-of-type(4),
 	background-color: var(--blur-color3);
 	-webkit-backdrop-filter: var(--blur-radius);
 	outline: 1px solid var(--body-color);
-}
-.footer .button.show-button {
-	display: block;
-	position: fixed;
 }
 .footer .button > a {
 	text-align: center;

@@ -1,4 +1,3 @@
-
 .intro-text {
 	padding: 1rem;
 	font-weight: 300;
@@ -17,7 +16,7 @@
 }
 .vid-caption {
 	text-align: center;
-    margin-block-end: 2em;
+	margin-block-end: 2em;
 }
 .audio-container {
 	padding: 1rem;
@@ -28,7 +27,7 @@
 }
 .media-element {
 	border-block-end: 1px solid var(--opaque-color);
-    border-bottom-left-radius: 50px;
+	border-bottom-left-radius: 50px;
 	margin-block-end: 2em;
 }
 .media-element-card {
@@ -45,10 +44,10 @@
 	padding: 15px 15px 0px;
 }
 .header-rule2 {
-    border-block-end: 1px solid var(--light-shade);
-    margin-inline: auto;
-    margin-block-end: 2em;
-    width: 50px;
+	border-block-end: 1px solid var(--light-shade);
+	margin-inline: auto;
+	margin-block-end: 2em;
+	width: 50px;
 }
 .media-wrap .caption {
 	padding: 15px 0;
@@ -77,8 +76,25 @@
 		margin-inline: auto;
 	}
 }
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 950px) {
 	.responsive-video {
 		padding-bottom: 40%;
 	}
+	.bg-container {
+        grid-template-columns: 1fr;
+		grid-template-areas:
+			"header header"
+			"main main"
+			"footer footer";
+	}
+	header {
+		grid-area: header;
+	}
+
+	main {
+		grid-area: main;
+	}
+    footer {
+        grid-area: footer;
+    }
 }
