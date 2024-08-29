@@ -2,13 +2,13 @@
 	margin-block-end: 2em;
 }
 table {
-    width: 100%;
+	width: 100%;
 }
 .responsive-table {
 	overflow-x: auto;
 }
 .container {
-    padding: 0 0.5rem;
+	padding: 0 0.5rem;
 }
 
 table,
@@ -20,7 +20,7 @@ td {
 }
 caption {
 	caption-side: bottom;
-	margin-block-start: 1em;
+	margin-block: 1em;
 }
 th,
 td {
@@ -29,41 +29,34 @@ td {
 	line-height: 1.5;
 }
 td {
-    height: auto;
-    display: flex;
+	height: auto;
+	display: flex;
 }
 .column-header {
 	height: 50px;
-}
-.scroll-hint {
-    font-weight: 600;
-    opacity: 0.7;
-}
-.scroll-hint > i {
-    vertical-align: middle;
+	background-color: var(--medium-shade);
+    color: var(--light-shade);
+    border: 1px solid var(--medium-shade);
 }
 
 @media screen and (min-width: 50rem) {
 	.responsive-table {
 		max-width: 900px;
-        margin-inline: auto;
-        border: 2px solid;
-        padding: 20px;
+		margin-inline: auto;
+		border: 2px solid;
+		padding: 20px;
 	}
-    td {
-        display: table-cell;
-        height: 49px;
-    }
-    tbody > tr > th:first-of-type {
-        min-width: 180px;
-    }
-    .scroll-hint {
-        display: none;
-    }
+	td {
+		display: table-cell;
+		height: 49px;
+	}
+	tbody > tr > th:first-of-type {
+		min-width: 180px;
+	}
 }
 @media screen and (min-width: 950px) {
-    .bg-container {
-        grid-template-columns: 1fr;
+	.bg-container {
+		grid-template-columns: 1fr;
 		grid-template-areas:
 			"header header"
 			"main main"
@@ -75,7 +68,7 @@ td {
 	main {
 		grid-area: main;
 	}
-    footer {
-        grid-area: footer;
-    }
+	footer {
+		grid-area: footer;
+	}
 }
