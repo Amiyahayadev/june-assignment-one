@@ -106,6 +106,11 @@ body {
 	color: var(--text-color);
 	line-height: 1.5;
 }
+.hero-pic {
+    background: url();
+    background-position: center center;
+    background-size: cover;
+}
 a[href] {
 	color: var(--text-color-2);
 }
