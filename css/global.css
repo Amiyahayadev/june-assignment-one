@@ -37,6 +37,7 @@ img {
 .new-tab-links a {
 	display: inline-block;
 	max-width: fit-content;
+    z-index: 2;
 }
 /*--- Utility classes --*/
 .no-link-decor {
@@ -105,11 +106,6 @@ body {
 	font-style: normal;
 	color: var(--text-color);
 	line-height: 1.5;
-}
-.hero-pic {
-    background: url();
-    background-position: center center;
-    background-size: cover;
 }
 a[href] {
 	color: var(--text-color-2);
@@ -195,12 +191,12 @@ nav.nav-menu > a {
 	cursor: pointer;
 }
 .nav-links-mobile {
-	border: 4px solid #7b7a764b;
 	width: 90%;
 	margin-inline: auto;
 	margin-block-end: 1rem;
 	background-size: 0% 100%;
 	transition: background-color 0.5s;
+    z-index: 2;
 }
 .nav-links-mobile:hover {
 	background-color: transparent;
@@ -422,7 +418,27 @@ section:nth-of-type(4),
 .footer > .copyright {
 	font-size: 0.85rem;
 }
+@media screen and (max-width: 949px) {
+    .hero-pic {
+    background-image: url(../assets/images/stunning_nature.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.overlay {
+    background: linear-gradient(180deg, rgba(255, 255, 254, 0.755) 0%, rgba(255, 255, 254, 0.692) 55%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+}
 
+}
 /*---------- Desktop layout  --------*/
 @media all and (min-width: 950px) {
 	.reduce-width {
